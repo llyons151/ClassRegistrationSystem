@@ -1,0 +1,27 @@
+CS2308 Data Structures
+4
+A0123456 Carol Williams
+A0123484 Liam Young
+A0123446 Sam Adams
+A0123490 Emily Chen
+*********************
+CS3103 Introduction to Algorithms
+20
+A0234567 Sarah Johnson
+A0234848 Ethan Parker
+A0234469 Maya Taylor
+A0234900 Lucas Evans
+A0234751 Olivia Baker
+A0234382 Ethan Kim
+A0234613 Sophia Martinez
+A0234194 Noah Brown
+A0234085 Ava Lee
+A0234726 Ethan Carter
+*********************
+MATH2010 Calculus II
+15
+A0345678 Lily Wilson
+A0348489 Ethan Davis
+A0344690 Maya Turner
+A0349001 Lucas Foster
+*********************
