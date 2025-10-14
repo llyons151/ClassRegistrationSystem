@@ -7,7 +7,7 @@ utils.o: src/utils.cpp include/program3.hpp
 course.o: src/course.cpp include/program3.hpp
 	g++ -g -std=c++17 -Iinclude -c src/course.cpp -o course.o
 
-student.o: src/student.cpp include/program3.hpp
+student.o: src/student.cpp include/student.hpp
 	g++ -g -std=c++17 -Iinclude -c src/student.cpp -o student.o
 
 program3_driver.o: src/program3_driver.cpp include/program3.hpp
