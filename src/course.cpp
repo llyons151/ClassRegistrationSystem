@@ -1,3 +1,31 @@
+/*********************************************************************
+File name: Course.cpp
+Author: Luke Lyons (ujw18)
+Date: 10/14/2025
+
+Purpose:
+   Implements the Course class: construction, deep copy (Rule of 3),
+   enrollment, capacity growth, and formatted course info output.
+
+Command Parameters:
+   - None (this is a library/source file, not an executable).
+
+Input:
+   - Indirect: methods receive parameters (e.g., Student objects,
+     additional capacity) as defined in program3.hpp.
+
+Results:
+   - Maintains a dynamic array of enrolled Student objects.
+   - Provides getCourseInfo() with exact multi-line formatting required.
+   - Supports enrollStudent(...) and increaseMaxEnrollment(...).
+
+Notes:
+   - Manages dynamic memory manually (new[]/delete[]) and copies only
+     iNumEnrolled elements when reallocating.
+   - Ensure the declaration in program3.hpp matches definitions here
+     (e.g., getCourseInfo() is const).
+*********************************************************************/
+
 #include "program3.hpp"
 
 Course::Course() : 
@@ -59,10 +87,11 @@ Course::~Course()
 
 string Course::getCourseInfo()
 {
-    std::string info = szCourseID + ": " + szCourseName +
-                       ", Capacity: " + std::to_string(iMaxStudents) +
-                       ", Enrollment: " + std::to_string(iNumEnrolled);
-    return info;
+    std::string out;
+    out += szCourseID + ": " + szCourseName + "\n";
+    out += "Capacity: " + std::to_string(iMaxStudents) + "\n";
+    out += "Enrollment: " + std::to_string(iNumEnrolled) + "\n";
+    return out;
 };
 
 bool Course::enrollStudent(const Student& newStudent)
@@ -80,10 +109,10 @@ bool Course::enrollStudent(const Student& newStudent)
 
 void Course::displayStudents() 
 {
-    std::cout << getCourseInfo() << std::endl;
+    std::cout << "Students enrolled in " << getCourseInfo() << std::endl;
 
     for (int i = 0; i < iNumEnrolled; ++i) {
-        std::cout << studentEnrolled[i].getStudentInfo() << std::endl;
+        std::cout << "-" << studentEnrolled[i].getStudentInfo() << std::endl;
     }
 }
 
