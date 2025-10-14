@@ -1,4 +1,4 @@
-#include "student.hpp"
+#include "program3.hpp"
 
 Student::Student() : szStudentID("A00000000"), szStudentName("Test Student") {};
 

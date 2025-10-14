@@ -1,4 +1,4 @@
-#include "course.hpp"
+#include "program3.hpp"
 
 Course::Course() : 
         szCourseID("XXX0000"),
