@@ -2,15 +2,15 @@
 
 Student::Student() : szStudentID("A00000000"), szStudentName("Test Student") {};
 
-Student::Studnet(string id, string name) : szStudentID(id), szStudentName(name) {};
+Student::Student(string id, string name) : szStudentID(id), szStudentName(name) {};
 
-Student::Student(const Student& other) : szStudnetID(other.szStudentID), 
+Student::Student(const Student& other) : szStudentID(other.szStudentID), 
                                          szStudentName(other.szStudentName){};
 
 Student::~Student() {};
 
-string Student::getStudnetInfo()
+string Student::getStudentInfo()
 {
-    return szStudnetID + ": " + szStudentName;
+    return szStudentID + ": " + szStudentName;
 };
 
