@@ -1,26 +1,3 @@
-/*********************************************************************
-File name: Student.cpp
-Author: Luke Lyons (ujw18)
-Date: 10/14/2025
-
-Purpose:
-   Implements the Student class: constructors, copy semantics,
-   destructor, and formatted info retrieval.
-
-Command Parameters:
-   - None (library/source file).
-
-Input:
-   - Constructor parameters (student ID and name).
-
-Results:
-   - Stores student ID and name.
-   - Provides getStudentInfo() returning "<ID>: <Name>".
-
-Notes:
-   - Keep declaration in program3.hpp in sync (e.g., getStudentInfo() const).
-*********************************************************************/
-
 #include "program3.hpp"
 
 Student::Student() : szStudentID("A00000000"), szStudentName("Test Student") {};
@@ -31,6 +8,23 @@ Student::Student(const Student& other) : szStudentID(other.szStudentID),
                                          szStudentName(other.szStudentName){};
 
 Student::~Student() {};
+
+/*********************************************************************
+Function Prototype:
+    std::string Student::getStudentInfo()
+
+Purpose:
+    Return the student's ID and name in a single formatted string.
+
+Parameters:
+    (none)
+
+Return Value:
+    std::string – student ID followed by name (e.g., "A00012345: John Doe").
+
+Notes:
+    Used for displaying student information in other classes such as Course.
+*********************************************************************/
 
 string Student::getStudentInfo()
 {

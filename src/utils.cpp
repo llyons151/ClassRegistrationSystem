@@ -1,32 +1,32 @@
+#include "program3.hpp"
+
 /*********************************************************************
-File name: utils.cpp
-Author: Luke Lyons (ujw18)
-Date: 10/14/2025
+Function Prototype:
+    void processCourseInformation(std::ifstream& fileInput,
+                                  Course* courseArr,
+                                  Student* studentArr,
+                                  int& courseCount,
+                                  int& studentCount);
 
 Purpose:
-   Parse a course roster text file and populate arrays of Course and
-   Student objects. Enrolls each parsed student into the appropriate course.
+    Read course and student data from a file and populate the given
+    Course and Student arrays.
 
-Command Parameters:
-   - (none; this is a library/source file providing functions)
+Parameters:
+    I  fileInput    – input file stream containing course data.
+    O  courseArr    – array to store Course objects.
+    O  studentArr   – array to store Student objects.
+    O  courseCount  – number of courses read.
+    O  studentCount – number of students read.
 
-Input:
-   An input stream (ifstream) where courses are listed as:
-     <CourseID> <Course Name...>
-     <NumberOfStudents>
-     <StudentID> <Student Name...>   (repeated for NumberOfStudents)
-     *****                           (separator between courses)
-
-Results:
-   Updates the provided arrays (Course* and Student*) and increments
-   courseCount and studentCount to reflect how many were processed.
+Return Value:
+    None (results stored in output parameters).
 
 Notes:
-   Assumes arrays passed in are large enough and the file format is
-   well-formed as described. Skips blank lines and separator lines.
+    • Skips blank lines or lines starting with '*'.
+    • Assumes arrays are large enough for all entries.
+    • Prints each student name as it is read.
 *********************************************************************/
-
-#include "program3.hpp"
 
 void processCourseInformation(ifstream& fileInput, Course* courseArr, Student* studentArr, int& courseCount, int& studentCount)
 {
